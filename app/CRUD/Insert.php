@@ -6,11 +6,7 @@ use App\Service;
 class Insert
 {
     private $table;
-    private $fields = '*';
-    private $limit;
-    private $order;
-    private $filters;
-    private $innerTables;
+    private $fields;
     private $con;
     
     public function __construct()
@@ -61,7 +57,7 @@ class Insert
      * @param bool $all
      * @return array|mixed
      */
-    public function runSelect($all = false)
+    public function runInsert($all = false)
     {
         try {
             $sqlInsert =  'INSERT ' . $this->table . ' (' . $this->fields . ')'
