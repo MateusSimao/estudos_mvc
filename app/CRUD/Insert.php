@@ -7,6 +7,8 @@ class Insert
 {
     private $table;
     private $fields;
+    private $fieldsValues;
+    private $values;
     private $con;
     
     public function __construct()
