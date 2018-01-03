@@ -1,0 +1,27 @@
+    <div class="container">
+        <h1>Listagem de contatos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($produtos as $produto) { ?>
+                    <tr>
+                        <td><?=$produto['idProduto']?></td>
+                        <td><?=$produto['nomeProduto']?></td>
+                        <td><?=$produto['descricaoProduto']?></td>
+                        <td><?=$produto['valorProduto']?></td>
+                        <td><?=$produto['quantidadeProduto']?></td>
+                        <td><a href="Produtos/Detalhe?idProduto=<?=base64_encode($produto['idProduto'])?>"><span class="glyphicon glyphicon-search"></span></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>

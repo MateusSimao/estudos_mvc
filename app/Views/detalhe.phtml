@@ -1,0 +1,10 @@
+    <div class="container">
+        <h1>Detalhe do produto <?=$produto['nomeProduto']?></h1>
+        <ul>
+            <li>Codigo: <?=$produto['idProduto']?></li>
+            <li>Descrição: <?=$produto['descricaoProduto']?></li>
+            <li>Valor: R$ <?=number_format($produto['valorProduto'],2,',','.')?></li>
+            <li>Quantidade: <?=$produto['quantidadeProduto']?></li>
+        </ul>
+        <a href="/"><span class="glyphicon glyphicon-arrow-left"></span> Voltar</a>
+    </div>
