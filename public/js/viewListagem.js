@@ -98,7 +98,7 @@ function novoProduto(){
         data: $('#formProdutoNovo').serialize(),
         success: function(result){
             if (result.success === true) {
-                alert('Contato Adicionado com sucesso!');
+                alert('Produto Adicionado com sucesso!');
                 $('#formProdutoNovo input').val('');
                 $('#modalProdutoNovo').modal('hide');
                 listarProdutos(true);
