@@ -34,13 +34,13 @@ class Produto
 
     public function setValorProduto($valorProduto)
     {
-        $this->valorProduto = $valorProduto;
+        $this->valorProduto = number_format($valorProduto,2,'.','');
         return $this;
     }
 
     public function setQuantidadeProduto($quantidadeProduto)
     {
-        $this->quantidadeProduto = $quantidadeProduto;
+        $this->quantidadeProduto = (int) $quantidadeProduto;
         return $this;
     }
 
