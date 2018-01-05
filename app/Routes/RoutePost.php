@@ -31,6 +31,13 @@ class RoutePost
             'Type' => 'Post'
         ];
 
+        $routes['Novo produto'] = [
+            'Application' => '/Produtos/Novo',
+            'Controller' => 'Produto',
+            'Action' => 'adicionarProduto',
+            'Type' => 'Post'
+        ];
+
         return $routes;
     }
 }

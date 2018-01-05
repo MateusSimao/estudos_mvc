@@ -75,6 +75,8 @@ class Insert
                 'success' => true,
                 'lastId' => $this->con->lastInsertId()
             ];
+
+            return $result;
         } catch(\PDOException $errorPDO) {
             return $errorPDO->getMessage();
         }

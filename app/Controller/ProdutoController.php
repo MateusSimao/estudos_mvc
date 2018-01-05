@@ -61,4 +61,20 @@ class ProdutoController
         
         echo json_encode($produto->deleteProduto());
     }
+
+    /**
+     * Metodo para adicionar um produto
+     */
+    public function adicionarProdutoAction()
+    {
+        $produto = new \App\Models\Produto();
+
+        $produto
+            ->setNomeProduto($_POST['nomeProduto'])
+            ->setDescricaoProduto($_POST['descricaoProduto'])
+            ->setValorProduto($_POST['valorProduto'])
+            ->setQuantidadeProduto($_POST['quantidadeProduto']);
+        
+        echo json_encode($produto->insertProduto());
+    }
 }

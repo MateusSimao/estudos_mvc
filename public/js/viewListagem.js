@@ -82,7 +82,26 @@ function removerProduto(idProduto) {
         success: function(result){
             if (result.success === true) {
                 alert('Produto deletado com sucesso');
-                listarProdutos();
+                listarProdutos(true);
+            }
+        }
+    });
+}
+
+function novoProduto(){
+    $.ajax({
+        type: 'POST',
+        url: 'Produtos/Novo',
+        dataType: 'JSON',
+        cache: false,
+        async: false,
+        data: $('#formProdutoNovo').serialize(),
+        success: function(result){
+            if (result.success === true) {
+                alert('Contato Adicionado com sucesso!');
+                $('#formProdutoNovo input').val('');
+                $('#modalProdutoNovo').modal('hide');
+                listarProdutos(true);
             }
         }
     });

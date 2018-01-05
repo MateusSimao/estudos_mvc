@@ -1,6 +1,6 @@
     <div class="container">
-        <h1>Listagem de contatos</h1>
-        <table class="table">
+        <h1>Listagem de produtos</h1>
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th class="text-center">id</th>
@@ -18,7 +18,7 @@
                     <td><input type="text" class="form-control" id="filtroDescricao"></td>
                     <td><input type="text" class="form-control" id="filtroValor"></td>
                     <td><input type="text" class="form-control" id="filtroQuantidade"></td>
-                    <td>&nbsp;</td>
+                    <td class="text-center"><button class="btn btn-success" data-toggle="modal" data-target="#modalProdutoNovo">Novo produto</button></td>
                 </tr>
             </tbody>
         </table>
@@ -54,6 +54,41 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Novo Produto-->
+    <div class="modal fade" id="modalProdutoNovo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Novo produto</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="formProdutoNovo">
+                        <div class="form-group">
+                            <label for="nomeProdutoNovo">Produto: </label>
+                            <input type="text" class="form-control" name="nomeProduto" id="nomeProdutoNovo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricaoProdutoNovo">Descrição: </label>
+                            <input type="text" class="form-control" name="descricaoProduto" id="descricaoProdutoNovo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="valorProdutoNovo">Valor: </label>
+                            <input type="text" class="form-control" name="valorProduto" id="valorProdutoNovo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantidadeProdutoNovo">Quantidade: </label>
+                            <input type="text" class="form-control" name="quantidadeProduto" id="quantidadeProdutoNovo" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onClick="novoProduto();">Save changes</button>
                 </div>
             </div>
         </div>

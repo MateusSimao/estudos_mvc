@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use \App\CRUD\Select;
+use \App\CRUD\Insert;
 use \App\CRUD\Delete;
 
 class Produto
@@ -107,6 +108,26 @@ class Produto
             ->setCondition('WHERE idProduto = :idProduto', [':idProduto' => $this->idProduto]);
 
         $result = $delete->runDelete();
+
+        return $result;
+    }
+
+    public function insertProduto()
+    {
+        $arrayValues = [
+            'nomeProduto' => $this->nomeProduto,
+            'descricaoProduto' => $this->descricaoProduto,
+            'valorProduto' => $this->valorProduto,
+            'quantidadeProduto' => $this->quantidadeProduto
+        ];
+
+        $insert = new Insert();
+        $insert
+            ->setTable('produtos')
+            ->setFields(['nomeProduto','descricaoProduto','valorProduto','quantidadeProduto'])
+            ->setFieldsValues($arrayValues);
+
+        $result = $insert->runInsert();
 
         return $result;
     }
