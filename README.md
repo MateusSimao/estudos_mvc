@@ -31,7 +31,7 @@
 **app/Views/listagem.phtml**: Arquivo de exemplo  
 
 - **app/Views/includes**: Pasta onde ficaram os arquivos que serão reutilizados e incluidos nas views.  
-**app/Views/includes/footer.phtml**
-**app/Views/includes/header.phtml**
+**app/Views/includes/footer.phtml**  
+**app/Views/includes/header.phtml**  
 
 - **public**: Pasta onde ficaram os arquivos que o usuario consiguira acessar pelo navegador  
