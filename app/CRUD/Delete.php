@@ -17,7 +17,7 @@ class Delete
     }
 
     /**
-     * Metodo para setar a tabela que irá trabalhar no insert
+     * Metodo para setar a tabela que irá trabalhar no delete
      * @param $table
      * @return $this
      */
@@ -42,7 +42,7 @@ class Delete
     }
 
     /**
-     * Metodo que irá executar a query de insert
+     * Metodo que irá executar a query de delete
      * @return array|mixed
      */
     public function runDelete()

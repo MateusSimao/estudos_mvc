@@ -59,7 +59,7 @@ class Insert
      * @param bool $all
      * @return array|mixed
      */
-    public function runInsert($all = false)
+    public function runInsert()
     {
         try {
             $sqlInsert =  'INSERT ' . $this->table . ' (' . $this->fields . ')'

@@ -82,7 +82,7 @@ class Produto
     public function getProdutos()
     {
         /**
-         * Criando os filtros para a query da grid
+         * Criando os filtros para a query
          */
         $arrayCondition = $this->mountConditionSelect();
         $arrayValues    = $arrayCondition['values'];
