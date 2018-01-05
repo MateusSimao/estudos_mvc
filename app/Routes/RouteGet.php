@@ -13,14 +13,14 @@ class RouteGet
         $routes['Index'] = [
             'Application' => '/',
             'Controller' => 'Index',
-            'Action' => 'listar',
+            'Action' => 'index',
             'Type' => 'GET',
             'Description' => 'Tela de listagem de produtos'
         ];
 
         $routes['Detalhe produto'] = [
             'Application' => '/Produtos/Detalhe',
-            'Controller' => 'Index',
+            'Controller' => 'Produto',
             'Action' => 'detalhe',
             'Type' => 'GET',
             'Description' => 'Tela de detalhes de um produto'

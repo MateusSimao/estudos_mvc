@@ -10,12 +10,25 @@ class RoutePost
      */
     public static function initRoutesPost()
     {
-        $routes['Log In'] = [
-            'Application' => '/test',
-            'Controller' => '',
-            'Action' => '',
-            'Type' => 'POST',
-            'Description' => ''
+        $routes['Detalhe produto Json'] = [
+            'Application' => '/Produtos/Detalhe/Json',
+            'Controller' => 'Produto',
+            'Action' => 'detalheJson',
+            'Type' => 'Post'
+        ];
+
+        $routes['Listagem produtos Json'] = [
+            'Application' => '/Produtos/Lista/Json',
+            'Controller' => 'Produto',
+            'Action' => 'listagemJson',
+            'Type' => 'Post'
+        ];
+
+        $routes['Deletar produto'] = [
+            'Application' => '/Produtos/Remove',
+            'Controller' => 'Produto',
+            'Action' => 'removerProduto',
+            'Type' => 'Post'
         ];
 
         return $routes;
